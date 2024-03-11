@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Poppins';
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+.Nav{
+    background-color: rgb(20, 20, 40);
+    overflow: hidden;
+}
+
+.Nav a {
+    align-content: start;
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+    font-size: 5vh;
+    text-decoration: none;
+}
+
+.Nav img{
+    width: 9vh;
+}
+
+.Nav a:hover{
+    background-color: white;
+    color: rgb(20, 20, 40);
+}
+
+.Nav a.Active{
+    background-color: blueviolet;
+    color: white;
+}
+
+.Front-img{
+    width: 100%;
+    margin: 0;
+}
+
+.wrapper{
+    font-size: 3vh;
+    text-align: center;
+}
+
+.wrapper header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vh 1vh 1vh;
+    font-size: 5vh;
+    text-align: center;
+}
+
+header .iconos span{
+    height: 2vh;
+    width: 2vh;
+    color: #878787;
+    margin: 0 0vh;
+    cursor: pointer;
+    text-align: center;
+    line-height: 2vh;
+    border-radius: 50%;
+}
+
+header .iconos span:hover{
+    background: #f2f2f2;
+}
+
+.calendari ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    padding-left: 2vh;
+    margin-bottom: 3vh;
+}
+
+.calendari ul li{
+    width: calc(100%/7);
+    position: relative;
+}
+
+.calendari .dies li{
+    z-index: -1;
+    cursor: pointer;
+    margin-top: 1.5vh;
+}
+
+.dies li .inactivo{
+    color: #aaa;
+}
+
+.calendari .dies li::before{
+    position: absolute;
+    content: "";
+    height: 2vh;
+    width: 2vh;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dies li:hover::before{
+    background: #f2f2f2;
+}
+
+.calendari .setmanes li {
+    font-weight: 500;
+}
+
+table{
+    border-spacing: 0;
+    margin: 0;
+    padding: 0;
+    height: 300vh;
+}
+
+.row{
+    display: flex;
+}
+
+.column{
+    flex: 25%;
+    padding: 2%;
+}
+
+.column1{
+    flex: 75%;
+    text-align: center;
+    justify-content: center;
+    font-size: 2vh;
+}
+
+.column1 a{
+    text-decoration: none;
+    color: black;
+}
+
+.column1 a:hover{
+    text-decoration: dashed;
+    color: blueviolet;
+}
+
+table{
+    width: 100%;
+}
+
+table img{
+    width: 50vh;
+}
+
+.main-menu{
+    height: 15vh;
+    width: 100%;
+    background-color: aliceblue;
+}
+
+.footpage {
+    height: 75vh;
+    width: 100%;
+    background-color: aliceblue;
+}
+
+.footpage a{
+    width: 10vh;
+    height: auto;
+    color: transparent;
+}
+
+.foot-text {
+    font-size: 5vh;
+    padding: 2%;
+}
+
+.foot-icon {
+    background-color: transparent;
+    border-color: transparent;
+    margin-left: 2%;
+    width: 10vh;
+    height: auto;
+}
+
+.contenedor{
+    max-width: 125vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.foto1{
+    background-image: url(https://i.pinimg.com/originals/9d/9d/76/9d9d760d2d3469d40eee08edb280f072.jpg);
+}
+
+.foto2{
+    background-image: url(https://educacionplasticayvisual.com/wp-content/uploads/linea-paralelas-dibujo-color-04.jpg);
+}
+
+.foto3{
+    background-image: url(https://educacionplasticayvisual.com/wp-content/uploads/linea-paralelas-dibujo-color-05.jpg);
+}
+
+.item{
+    width: 30%;
+    height: 70vh;
+    margin: 0 2vh;
+    background-size: cover;
+    background-position: center center;
+    transition: .3s;
+    position: relative;
+    border-radius: 5vh;
+}
+
+.item:hover{
+    width: 60vh;
+    height: auto;
+}
+
+.overlay{
+    position: absolute;
+    background: linear-gradient(to bottom, transparent 80%, rgba(0,0,0,.7));
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5vh;
+}
+
+.item .titulo{
+    transform: rotate(-90deg);
+    position: absolute;
+    bottom: 0;
+    transform-origin: left top 0;
+    color: #fff;
+    text-shadow: 1vh 1vh 1.5vh #000;
+    letter-spacing: 1vh;
+    left: 4vh;
+}
+
+.item .nombre{
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 4vh;
+    transition: 1s;
+    opacity: 0;
+}
+
+.item .titulo::after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 120%;
+    background-color: #000;
+    left: 0;
+    z-index: -1;
+    transition: 0.5s;
+    line-height: 5vh;
+}
+
+.item:hover .nombre{
+    opacity: 1;
+}
+
+.item:hover .titulo::after{
+    width: 100%;
+}
